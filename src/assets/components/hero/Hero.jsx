@@ -1,62 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
-// import ban from "./assets/img.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-
-const Card = ({ title, description, image }) => {
+const HeroSection = () => {
   return (
-    <div className="bg-green rounded-lg shadow-md overflow-hidden transform transition-all hover:scale-105">
-      <img className="w-full h-48 object-cover" src={image} alt={title} />
-      <div className="p-4">
-        <h2 className="text-lg font-bold text-gray-800">{title}</h2>
-        <p className="text-gray-600">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-const HeroWithCards = () => {
-  const cards = [
-    {
-      title: "Mens Haircuts",
-      description: "top best hair styles for mens",
-      image: "https://www.menshairstylestoday.com/wp-content/uploads/2019/02/Best-Haircuts-For-Men.jpg.webp",
-    },
-    {
-      title: "Womens Haircuts",
-      description: "top best hair styles for womens",
-      image: "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2025/04/17-shaggy-bob-haircut.jpg?resize=878%2C974&ssl=1",
-    },
-    {
-      title: "skin care",
-      description: "top best skin care products",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhY2UlMjBzY3J1YnxlbnwwfHwwfHx8MA%3D%3D",
-    },
-  ];
-
-  return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-2 py-20">
       {/* Hero Section */}
-     <Link to="/features"> <div className="bg-blue-600 text-white text-center p-16 rounded-lg mb-8">
-      {/* <img
-          src={ban}
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-        /> */}
-
-        <h1 className="text-4xl font-bold mb-4">Welcome to NewTrend!</h1>
-        <p className="text-lg">This Page Helps You to Changr your Style</p>
-      </div></Link>
-
-      {/* Card Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {cards.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </div>
+      <Link to="/about">
+        <div
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1595475884562-073c30d45670?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            backgroundSize: "cover", // Ensures the image covers the entire container
+            backgroundPosition: "center", // Centers the image
+            height: "400px", // Adjust height as needed
+            width: "100%", // Full width
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "black",
+            borderRadius: "8px", // Optional rounded corners
+          }}
+        >
+          <h1 className="text-4xl font-bold mb-4 ">Welcome to Choose Your Style Salon</h1>
+          <p className="text-lg mb-6">Transform your look with our expert stylists and premium services.</p>
+          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold shadow-lg">
+            Learn More About Us
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };
 
-export default HeroWithCards;
+export default HeroSection;

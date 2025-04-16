@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -19,14 +20,16 @@ const AboutSection = () => {
           <div className="md:w-1/2 mt-6 md:mt-0 md:ml-8 text-center md:text-left">
             <h2 className="text-3xl font-bold mb-4">About Our Salon</h2>
             <p className="text-lg text-gray-600 mb-4">
-              Welcome to **Style & Shine Salon**, your go-to destination for expert hair styling and transformation. Our team of professionals is passionate about creating stunning looks that match your personality.
+              Welcome to **Choose your style saloon**, your go-to destination for expert hair styling and transformation. Our team of professionals is passionate about creating stunning looks that match your personality.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Whether you're looking for a chic haircut, vibrant hair coloring, or luxurious hair treatments, we've got you covered. Experience the artistry of hairstyling with us!
             </p>
+            <Link to="/service">
             <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-              Learn More
+              Explore Our Services
             </button>
+            </Link>
           </div>
         </div>
       </div>
